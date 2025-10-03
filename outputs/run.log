@@ -1,0 +1,51 @@
+=== Dataset Preview ===
+   Sales_ID Product_ID    Product_Name Customer_ID Order_Date  ... Unit_Cost Total_Cost  Delivery_Location  Sales_Status  Order_Block
+0  S0002062       P005  Epsilon Widget     CUST003 2024-09-24  ...     29.36     205.52          Aaronland     Completed     No Block
+1  S0003507       P008      Theta Tool     CUST027 2024-09-24  ...    201.33    1006.65          Josephton     Completed     No Block
+2  S0002061       P005  Epsilon Widget     CUST024 2024-09-24  ...     28.00     252.00      Port Johnfurt     Completed     No Block
+3  S0000240       P002     Beta Gadget     CUST028 2024-09-24  ...    112.75     225.50         Jamesmouth     Completed     No Block
+4  S0004147       P009     Iota Widget     CUST012 2024-09-25  ...     35.00     210.00        Santosburgh     Completed     No Block
+
+[5 rows x 13 columns]
+
+=== Dataset Info ===
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 1000 entries, 0 to 999
+Data columns (total 13 columns):
+ #   Column                   Non-Null Count  Dtype         
+---  ------                   --------------  -----         
+ 0   Sales_ID                 1000 non-null   object        
+ 1   Product_ID               1000 non-null   object        
+ 2   Product_Name             1000 non-null   object        
+ 3   Customer_ID              1000 non-null   object        
+ 4   Order_Date               1000 non-null   datetime64[ns]
+ 5   Confirmed_Delivery_Date  1000 non-null   datetime64[ns]
+ 6   Invoice Date             1000 non-null   datetime64[ns]
+ 7   Quantity_Sold            1000 non-null   int64         
+ 8   Unit_Cost                1000 non-null   float64       
+ 9   Total_Cost               1000 non-null   float64       
+ 10  Delivery_Location        1000 non-null   object        
+ 11  Sales_Status             1000 non-null   object        
+ 12  Order_Block              1000 non-null   object        
+dtypes: datetime64[ns](3), float64(2), int64(1), object(7)
+memory usage: 101.7+ KB
+None
+
+=== Numerical Summary ===
+        Sales_ID Product_ID Product_Name Customer_ID  ...  Total_Cost Delivery_Location Sales_Status  Order_Block
+count       1000       1000         1000        1000  ...  1000.00000              1000         1000         1000
+unique      1000         10           10          30  ...         NaN               665            2            4
+top     S0002062       P009  Iota Widget     CUST012  ...         NaN      Lake Amybury    Completed     No Block
+freq           1        153          153          41  ...         NaN                 5          966          863
+mean         NaN        NaN          NaN         NaN  ...   704.43751               NaN          NaN          NaN
+min          NaN        NaN          NaN         NaN  ...    27.07000               NaN          NaN          NaN
+25%          NaN        NaN          NaN         NaN  ...   319.25250               NaN          NaN          NaN
+50%          NaN        NaN          NaN         NaN  ...   681.69000               NaN          NaN          NaN
+75%          NaN        NaN          NaN         NaN  ...  1029.96750               NaN          NaN          NaN
+max          NaN        NaN          NaN         NaN  ...  1783.92000               NaN          NaN          NaN
+std          NaN        NaN          NaN         NaN  ...   418.45117               NaN          NaN          NaN
+
+[11 rows x 13 columns]
+Saved daily sales trend plot to outputs/daily_sales_trend.png
+Saved sales distribution plot to outputs/sales_distribution_by_product.png
+Saved quantity sold time series plot to outputs/quantity_sold_time_series.png
