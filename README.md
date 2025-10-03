@@ -27,6 +27,7 @@ This repository delivers an end-to-end workflow for exploring historical sales d
    python convert_data.py
    ```
    This creates `Sales_History_Dataset.csv`, which the analysis and forecasting scripts consume.
+   Because Excel workbooks are ignored via `.gitignore`, the CSV output is the canonical tracked dataset for the project.
 
 ## How to Run the Analysis
 1. **Exploratory Data Analysis** – Execute the main script to profile the dataset and generate descriptive plots:
